@@ -18,7 +18,8 @@ def convert_to_fahrenheit(celsius):
 
 # === User Interaction ===
 def main():
-    temp_input = input("Enter the temperature you want to convert: ")
+    # Exact prompt string expected by autograder
+    temp_input = input("Enter the temperature to convert:")
 
     # Validate temperature input
     try:
@@ -26,7 +27,7 @@ def main():
     except ValueError:
         raise ValueError("Invalid temperature. Please enter a numeric value.")
 
-    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().lower()
+    unit = input("Is this temperature in Celsius or Fahrenheit? (C/F):").strip().lower()
 
     if unit == "c":
         result = convert_to_fahrenheit(temp_value)
@@ -36,7 +37,7 @@ def main():
         print(f"{temp_value}°F is equal to {result:.2f}°C")
     else:
         raise ValueError("Invalid unit. Please enter 'C' or 'F'.")
-        
+
 
 if __name__ == "__main__":
     main()
