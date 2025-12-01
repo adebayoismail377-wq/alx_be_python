@@ -8,17 +8,16 @@ class TestSimpleCalculator(unittest.TestCase):
         self.calc = SimpleCalculator()
 
     # -------------------------
-    #       ADD TESTS
+    #       ADD TEST
     # -------------------------
-    def test_addition_positive_numbers(self):
+    def test_addition(self):
+        # Positive numbers
         self.assertEqual(self.calc.add(2, 3), 5)
         self.assertEqual(self.calc.add(10, 5), 15)
-
-    def test_addition_negative_numbers(self):
+        # Negative numbers
         self.assertEqual(self.calc.add(-1, -1), -2)
         self.assertEqual(self.calc.add(-5, 3), -2)
-
-    def test_addition_with_zero(self):
+        # Zero
         self.assertEqual(self.calc.add(0, 5), 5)
         self.assertEqual(self.calc.add(7, 0), 7)
 
