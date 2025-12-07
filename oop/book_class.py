@@ -10,8 +10,7 @@ class Book:
         # Called when the object is about to be destroyed
         print(f"Deleting {self.title}")
 
-    def __str__(self):
-        # Human-readable string representation
+    def __str__(self):        # Human-readable string representation
         return f"{self.title} by {self.author}, published in {self.year}"
 
     def __repr__(self):
